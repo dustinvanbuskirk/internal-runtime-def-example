@@ -6,30 +6,30 @@ metadata:
 spec:
   requiredCLIVersion: ^0.1.0
   version: 0.1.20
-  bootstrapSpecifier: github.com/codefresh-contrib/internal-runtime-def-example/manifests/argo-cd
+  bootstrapSpecifier: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/argo-cd
   components:
   - name: events
     type: kustomize
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/argo-events
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/argo-events
     wait: true
   - name: rollouts
     type: kustomize
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/argo-rollouts
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/argo-rollouts
   - name: workflows
     type: kustomize
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/argo-workflows
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/argo-workflows
   - name: app-proxy
     type: kustomize
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/app-proxy
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/app-proxy
     syncWave: 9
   - name: internal-router
     type: kustomize
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/internal-router
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/internal-router
     syncWave: 10
   - name: sealed-secrets
     type: kustomize
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/sealed-secrets
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/sealed-secrets
   - name: codefresh-tunnel-client
     type: helm
-    url: github.com/codefresh-contrib/internal-runtime-def-example/manifests/codefresh-tunnel-client
+    url: github.com/dustinvanbuskirk/internal-runtime-def-example/manifests/codefresh-tunnel-client
     feature: ingressless
