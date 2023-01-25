@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: nginx
-  newName: <private_registry>/nginx
+  newName: dustinvanbuskirk/nginx
   newTag: 1.22-alpine
 
 resources:

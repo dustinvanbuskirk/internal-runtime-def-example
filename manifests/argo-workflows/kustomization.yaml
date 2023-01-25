@@ -3,13 +3,13 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argocli
-  newName: <private_registry>/argocli
+  newName: dustinvanbuskirk/argocli
   newTag: v3.4-cap-CR-15902
 - name: quay.io/codefresh/argoexec
-  newName: <private_registry>/argoexec
+  newName: dustinvanbuskirk/argoexec
   newTag: v3.4-cap-CR-15902
 - name: quay.io/codefresh/workflow-controller
-  newName: <private_registry>/workflow-controller
+  newName: dustinvanbuskirk/workflow-controller
   newTag: v3.4-cap-CR-15902
 
 patches:
@@ -21,7 +21,7 @@ patches:
   patch: |
     - op: replace
       path: /spec/template/spec/containers/0/args/3
-      value: <private_registry>/argoexec:v3.4-cap-CR-15902
+      value: dustinvanbuskirk/argoexec:v3.4-cap-CR-15902
 
 resources:
 - github.com/codefresh-io/csdp-official.git/csdp/hybrid/basic/apps/argo-workflows?ref=0.1.20
